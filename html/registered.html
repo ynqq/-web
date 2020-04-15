@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="../css/amazeui.min.css" />
+    <link rel="stylesheet" href="../wangEditor-2.1.20/dist/css/wangEditor.min.css">
+    <link rel="stylesheet" href="../css/x0popup.min.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <script src="../js/jquery-1.8.2.min.js"></script>
+    <script src="../js/x0popup.min.js"></script>
+    <script src="../wangEditor-2.1.20/dist/js/wangEditor.min.js"></script>
+    <script src="../js/tool.js"></script>
+    <style>
+        html,
+        body {
+            background-color: #efefef;
+        }
+
+        .formBox {
+            width: 800px;
+            margin: 60px auto 0;
+            background-color: #fff;
+            padding: 20px 30px;
+        }
+
+        .login-ttile {
+            font-size: 24px;
+            font-weight: bolder;
+            text-align: center;
+            height: 60px;
+        }
+
+        .shouwPicBox {
+            position: relative;
+        }
+
+        .deletePic {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: rgba(0, 0, 0, .3);
+            cursor: pointer;
+            color: #fff;
+            border-radius: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row widget  am-cf formBox">
+        <div class="login-ttile">
+            用户注册
+        </div>
+        <div class="form-group am-cf">
+            <label class="control-label am-u-sm-2">手机号:</label>
+            <input type="text" name="phone" class="form-control am-u-sm-4">
+        </div>
+        <div class="form-group am-cf">
+            <label class="control-label am-u-sm-2">密码:</label>
+            <input type="text" name="password" class="form-control am-u-sm-4">
+        </div>
+        <div class="form-group am-cf">
+            <label class="control-label am-u-sm-2">确认密码:</label>
+            <input type="text" name="passwordAgain" class="form-control am-u-sm-4">
+        </div>
+        <div class="form-group am-cf">
+            <label class="control-label am-u-sm-2">商户名:</label>
+            <input type="text" name="name" class="form-control am-u-sm-4">
+        </div>
+        <div class="form-group am-cf">
+            <label class="control-label am-u-sm-2">商户地址:</label>
+            <input type="text" name="address" class="form-control am-u-sm-4">
+        </div>
+        <div class="form-group am-cf">
+            <label class="control-label am-u-sm-2">请上传logo:</label>
+            <div class="am-form-group fileBox form-control am-form-file">
+                <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                    <i class="am-icon-cloud-upload"></i> 选择要上传的文件</button>
+                <input id="doc-form-file" name="file" accept=".jpg,.png,.jpeg" type="file">
+            </div>
+            <div class="am-form-group fileBox shouwPicBox form-control hide" style="height:auto;">
+                <div class="deletePic">删除</div>
+                <img class="showPic" style="width:400px" alt="">
+            </div>
+        </div>
+        
+        <div class="form-group am-cf">
+            <label class="control-label am-u-sm-2"></label>
+            <button class="form-btn am-u-sm-1 submit am-btn am-btn-primary am-radius">提交</button>
+            <button class="form-btn am-u-sm-1 back am-btn am-btn-default am-radius">返回</button>
+        </div>
+    </div>
+    <script src="../js/amazeui.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/headerSide.js"></script>
+    <script src="../jsMethod/registered.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

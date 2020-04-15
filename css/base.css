@@ -1,0 +1,106 @@
+html,body{
+    min-width: 1000px;
+}
+.hide{
+    display: none!important;
+}
+.transparent{
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+th,td{
+    vertical-align: middle!important;
+    text-align: center;
+}
+[class*=am-u-]+[class*=am-u-]:last-child{
+    float: left;
+}
+.am-form-group{
+    margin-bottom: 0;
+}
+.row{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.theme-white .widget{
+    padding: 0 20px;
+}
+input{
+    border: 1px solid #e6e6e6;
+}
+
+.form-group{
+    width: 100%;
+    margin: 15px 0;
+}
+.control-label{
+    float: left;
+    /* width: 100px; */
+    line-height: 35px;
+    text-align: right;
+    white-space: nowrap;
+    margin-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.form-control{
+    float: left;
+    margin: 0 15px;
+    line-height: 37px;
+    height: 37px;
+}
+input.form-control{
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 200px;
+    box-sizing: border-box;
+}
+textarea.form-control{
+    height: auto;
+    min-height: 300px;
+    outline: none;
+    resize: none;
+}
+.form-btn{
+    margin: 0 15px;
+}
+.form-group .form-control+.am-selected{
+    margin: 0 15px;
+}
+
+.form-inline{
+    padding-left: 30px;
+}
+.form-inline .form-control{
+    margin: 0 15px 0 0 ;
+}
+.form-inline-group{
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.row-layout-group,.col-layout-group{
+    margin-bottom: 15px;
+}
+.row-layout-title{
+    float: left;
+    width: 100px;
+    word-break: break-all;
+    text-align: justify;
+}
+.row-layout-content{
+    float: left;
+    margin-left: 15px;
+    width: calc(100% - 115px);
+}
+.col-layout-title{
+    margin-bottom: 10px;
+}
+.col-layout-content{
+    padding-left: 115px;
+    box-sizing: border-box;
+}

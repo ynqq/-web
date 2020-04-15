@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="./css/amazeui.min.css" />
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/x0popup.min.css">
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <style>
+        .dragList {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .dragItem {
+            height: 40px;
+            line-height: 40px;
+            background-color: orange;
+            cursor: move;
+            border-bottom: 1px solid #000;
+            margin-bottom: 100px;
+        }
+        .active{
+            background-color: orchid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dragList">
+        <div class="dragItem" draggable="true">1</div>
+        <div class="dragItem" draggable="true">2</div>
+        <div class="dragItem" draggable="true">3</div>
+        <div class="dragItem" draggable="true">4</div>
+        <div class="dragItem" draggable="true">5</div>
+    </div>
+    <script src="./js/jquery-1.8.2.min.js"></script>
+    <script>
+
+        var target, startIndex = -1
+        $('.dragList').on('dragenter', function (e) {
+            e.preventDefault()
+        })
+        $('.dragList').on('dragover', function (e) {
+            var el
+            if ($(e.target).is('.dragItem')) {
+                el = $(e.target)
+            } else {
+                el = $(e.target).parents('.dragItem').eq(0)
+            }
+            if (el == target) {
+                return
+            }
+            $(el).addClass('active').siblings('.dragItem').removeClass('active')
+            if (startIndex < $(el).index()) {
+                $(el).after($(target))
+            } else if (startIndex > $(el).index()) {
+                $(el).before($(target))
+            }
+            startIndex = $(target).index()
+            e.preventDefault()
+        })
+        $('.dragList').on('drag', '.dragItem', function (e) {
+            $('.dragItem').removeClass('active')
+            e.preventDefault()
+        })
+        $('.dragList').on('drop', function (e) {
+            $('.dragItem').removeClass('active')
+        })
+        $('.dragList').on('dragstart', '.dragItem', function (e) {
+            startIndex = $(e.target).index()
+            target = e.target
+        })
+    </script>
+</body>
+
+</html>

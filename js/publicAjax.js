@@ -1,0 +1,1 @@
+var urlIp="http://localhost:8080/laboratory/";
